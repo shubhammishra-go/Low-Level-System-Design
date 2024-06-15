@@ -119,7 +119,7 @@ The UML specifies two types of scope for members: instance and class. The class 
      - Attribute values are equal for all instances
      - Method invocation does not affect the classifier's state.
 
-![alt text](image-5.png)
+![alt text](image-3.png)
 
 To indicate a classifier scope for a member, its name must be underlined. Otherwise, instance scope is assumed by default. 
 
