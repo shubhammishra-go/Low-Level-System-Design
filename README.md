@@ -81,7 +81,7 @@ Class diagram in the Unified Modeling Language (UML) is a `type of static struct
 
 The class diagram is the main building block of object-oriented modeling. It is used for general conceptual modeling of the structure of the application, and for detailed modeling, translating the models into programming code. Class diagrams can also be used for data modeling. The classes in a class diagram represent both the main elements, interactions in the application, and the classes to be programmed. 
 
-![alt text](image-3.png)
+![alt text](image-6.png)
 
 
 In the diagram, classes are represented with boxes that contain `three compartments`: 
