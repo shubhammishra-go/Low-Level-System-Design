@@ -77,6 +77,59 @@ we will discusss just Class Diagram & Use case diagram.
 
 # Class Diagram
 
+Class diagram in the Unified Modeling Language (UML) is a `type of static structure diagram` that describes the structure of a system by showing the system's classes, their attributes, operations (or methods), and the relationships among objects. 
+
+The class diagram is the main building block of object-oriented modeling. It is used for general conceptual modeling of the structure of the application, and for detailed modeling, translating the models into programming code. Class diagrams can also be used for data modeling. The classes in a class diagram represent both the main elements, interactions in the application, and the classes to be programmed. 
+
+![alt text](image-3.png)
+
+
+In the diagram, classes are represented with boxes that contain `three compartments`: 
+
+- The top compartment contains the `name` of the class. It is printed in bold and centered, and the `first letter is capitalized`.
+
+- The middle compartment contains the `attributes` or `Variables` of the class. They are left-aligned and the `first letter is lowercase`.
+
+- The bottom compartment contains the `operations` or `functions` the class can execute. They are also left-aligned and the `first letter is lowercase`.
+
+`Note ::: ` colon (:) used to represents return type of functions/variables.
+
+
+## Visibility
+
+To specify the visibility of a class member (i.e. any attribute or method), these notations must be placed before the member's name.
+
+![alt text](image-4.png) 
+
+- (+) Public
+- (-) Private
+- (#) Protected
+- (~) Package
+- (/) Derived
+
+## Scope
+
+The UML specifies two types of scope for members: instance and class. The class name appears an underlined concatenation of the instance name (if any), a colon (':'), and the actual class name.
+
+- `Instance members` are scoped to a specific instance.
+     - Attribute values may vary between instances
+     - Method invocation may affect the instance's state (i.e. change instance's attributes)
+
+- `Class members` are commonly recognized as "static" in many programming languages. The scope end is the class itself. 
+     - Attribute values are equal for all instances
+     - Method invocation does not affect the classifier's state.
+
+![alt text](image-5.png)
+
+To indicate a classifier scope for a member, its name must be underlined. Otherwise, instance scope is assumed by default. 
+
+
+
+# Relationships
+
+A relationship is a general term covering the specific types of logical connections found on class and object diagrams. UML defines the following relationships.
+
+
 
 
 
