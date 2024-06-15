@@ -129,10 +129,84 @@ To indicate a classifier scope for a member, its name must be underlined. Otherw
 
 A relationship is a general term covering the specific types of logical connections found on class and object diagrams. UML defines the following relationships.
 
+![alt text](image-9.png)
+
+we will discuss each & every relations.
+
+
+## Generalization/Inheritance
+
+It indicates that one of the two related classes (the subclass) is considered to be a specialized form of the other (the super type) and the superclass is considered a Generalization of the subclass. In practice, this means that any instance of the subtype is also an instance of the superclass. An exemplary tree of generalizations of this form is found in biological classification: humans are a subclass of simian, which is a subclass of mammal, and so on. The relationship is most easily understood by the phrase 'an A is a B' (a human is a mammal, a mammal is an animal).
+
+
+```symbolic of realization           (subclass) ________▻ (superclass)```
+
+A solid line with a hollow arrowhead that point from the child to the parent class.
+
+![alt text](image-13.png)
+
+
+The generalization relationship is also known as the inheritance or ```"is a"``` relationship. 
 
 
 
+## Association
 
+Association defines a relationship between classes of objects that allows one object instance to cause another to perform an action on its behalf. This relationship is structural, because it specifies that objects of one kind are connected to objects of another and does not represent behaviour.
+
+
+An association represents a family of structural links. 
+A `binary association` is represented as a solid line between two classes. 
+A `reflexive association` is a binary association between the class and itself. 
+An association between more than two classes is represented as a diamond connected with a solid line to each of the associated classes. 
+An association between three classes is a `ternary association`. 
+An association between more classes is called an `n-ary association`. 
+
+
+An association can be named, and the ends of an association can be adorned with role names, aggregation indicators, multiplicity, visibility, navigability and other properties. 
+The dot notation for example allows to represent with a little dot on the side of one class that the association end is owned by the other side.
+
+
+![alt text](image-15.png)
+
+
+There are three types of association: 
+
+`simple association`, `shared aggregation`, `composite aggregation (composition)`. 
+
+An association can be navigable in one or more directions. 
+
+The navigability does not have to be explicitly specified. 
+
+An open-headed arrow on the side of a class documents that the class can be reached efficiently at run-time from the opposite side. 
+
+A unidirectional navigation is shown with a little cross on the association line on the side of the class that cannot be reached. 
+For instance, a flight class is associated with a plane class bi-directionally. 
+
+
+There are 3 types of following represtenations of associations.
+
+`A solid line connecting two classes`. But they are further classified.
+
+![alt text](image-14.png)
+
+`Top:` A bidirectional association.
+
+`Middle:` An association is bidirectional, although it may be limited to just one direction by adorning some end with an arrowhead pointing to the direction of traversal.
+
+`Bottom:` Association is prohibited.
+
+The objects that are related via the association are considered to act in a role with respect to the association, if object's current state in the active situation allows the other associated objects to use the object in the manner specified by the role. A role can be used to distinguish two objects of the same class when describing its use in the context of the association. A role describes the public aspects of an object with respect to an association.
+
+The ends of the association can have all the characteristics of a property:
+
+  -  They can have a multiplicity, expressed by a lower and an upper limit in the form of "lowerLimit..upperLimit".
+  - You can have a name.
+  -  You can declare a visibility.
+  - You can specify whether the end of the association is ordered and / or unique.
+
+
+## Aggregation
 
 
 
