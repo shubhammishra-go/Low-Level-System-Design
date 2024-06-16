@@ -148,11 +148,21 @@ A solid line with a hollow arrowhead that point from the child to the parent cla
 
 The generalization relationship is also known as the inheritance or ```"is a"``` relationship. 
 
+Generalization is the `name of the relationship`. Inheritance is the `mechanism` that the generalization relationship represents.
 
 
 ## Association
 
 Association defines a relationship between classes of objects that allows one object instance to cause another to perform an action on its behalf. This relationship is structural, because it specifies that objects of one kind are connected to objects of another and does not represent behaviour.
+
+Dictionary meaning :  `the act of connecting thing with another thing.`
+
+
+Association relationship is a structural relationship in which different objects are linked within the system. It exhibits a binary relationship between the objects representing an activity. It depicts the relationship between objects, such as a teacher, can be associated with multiple teachers.
+
+It is represented by a `line` between the classes followed by an arrow that navigates the direction, and when the arrow is on both sides, it is then called a bidirectional association. `We can specify the multiplicity of an association by adding the adornments on the line that will denote the association.`
+
+![alt text](image-21.png)
 
 
 An association represents a family of structural links. 
@@ -208,5 +218,81 @@ The ends of the association can have all the characteristics of a property:
 
 ## Aggregation
 
+Dictionary meaning : `the collection of related items of content so that they can be displayed or linked to`
+OR 
+`a cluster of things that have come or been brought together.`
 
 
+Aggregation is a variant of the `"has a"` association relationship; aggregation is more specific than association. It is an association that represents a `part-whole` or `part-of relationship`. As shown in the image, a Professor 'has a' class to teach. As a type of association, an aggregation can be named and have the same adornments that an association can. However, an aggregation may not involve more than two classes; it must be a binary association. Furthermore, there is hardly a difference between aggregations and associations during implementation, and the diagram may skip aggregation relations altogether.
+
+![alt text](image-16.png)
+
+Class diagram showing Aggregation between two classes. Here, a Professor 'has a' class to teach.
+
+
+Aggregation can occur when a class is a collection or container of other classes, `but the contained classes do not have a strong lifecycle dependency on the container. The contents of the container still exist when the container is destroyed. `
+
+
+In UML, it is graphically represented as a `hollow diamond` shape on the containing class with a single line that connects it to the contained class. The aggregate is semantically an extended object that is treated as a unit in many operations, although physically it is made of several lesser objects. 
+
+Aggregation is a `subset of association`, is a collection of different things. It represents has a relationship. `It is more specific than an association`. It describes a part-whole or part-of relationship. It is a binary association, i.e., it only involves two classes. `It is a kind of relationship in which the child is independent of its parent`.
+
+
+Another Example:
+
+Here we are considering a car and a wheel example. A car cannot move without a wheel. But the wheel can be independently used with the bike, scooter, cycle, or any other vehicle. The wheel object can exist without the car object, which proves to be an aggregation relationship.
+
+![alt text](image-17.png)
+
+
+So, In aggregation, the object may only contain a reference or pointer to the object (and `not have lifetime responsibility` for it).
+Therefore, Inheritance should be used only if the relationship is-a is maintained throughout the lifetime of the objects involved; otherwise, aggregation is the best choice.
+
+
+## Composition
+
+Dictionary Meaning : `the parts that form something; the way in which the parts of something are arranged`
+
+
+The composite aggregation (colloquially called composition) relationship is a stronger form of aggregation where the `aggregate controls the lifecycle of the elements it aggregates`. 
+
+The graphical representation is a `filled diamond shape` on the containing class end of the line that connect contained class(es) to the containing class. 
+
+
+The composition is a part of aggregation, and it portrays [to show something] the whole-part relationship. It depicts dependency between a composite (parent) and its parts (children), which means that if the composite is discarded, so will its parts get deleted. It exists between similar objects.
+
+
+![alt text](image-19.png)
+
+As you can see from the example given below, the composition association relationship connects the Person class with Brain class, Heart class, and Legs class. If the person is destroyed, the brain, heart, and legs will also get discarded.
+
+
+
+### Differences between Composition and Aggregation
+
+The composition and aggregation are two subsets of association. In both of the cases, the object of one class is owned by the object of another class; the only difference is that in composition, the child does not exist independently of its parent, whereas in aggregation, the child is not dependent on its parent i.e., standalone. An aggregation is a special form of association, and composition is the special form of aggregation.
+
+
+![alt text](image-20.png)
+
+
+::: `Composition relationship` ::: 
+
+- When attempting to represent real-world whole-part relationships, e.g. an engine is a part of a car.
+- When the container is destroyed, the contents are also destroyed, e.g. a university and its departments.
+
+
+
+::: `Aggregation relationship` :::
+
+- When representing a software or database relationship, e.g. car model engine ENG01 is part of a car model CM01, as the engine, ENG01, maybe also part of a different car model.
+- When the container is destroyed, the contents are usually not destroyed, e.g. a professor has students; when the professor leaves the university the students do not leave along with the professor.
+
+Thus the aggregation relationship is often "catalog" containment to distinguish it from composition's "physical" containment. UML 2 does not specify any semantic for the aggregation compared to the simple association. 
+
+
+![alt text](image-18.png)
+
+Two class diagrams. The diagram on top shows Composition between two classes: A Car has exactly one Carburetor, and a Carburetor is a part of one Car. Carburetors cannot exist as separate parts, detached from a specific car. 
+
+The diagram on bottom shows Aggregation between two classes: A Pond has zero or more Ducks, and a Duck has at most one Pond (at a time). Duck can exist separately from a Pond, e.g. it can live near a lake. When we destroy a Pond we usually do not kill all the Ducks.
