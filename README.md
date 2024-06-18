@@ -296,3 +296,52 @@ Thus the aggregation relationship is often "catalog" containment to distinguish 
 Two class diagrams. The diagram on top shows Composition between two classes: A Car has exactly one Carburetor, and a Carburetor is a part of one Car. Carburetors cannot exist as separate parts, detached from a specific car. 
 
 The diagram on bottom shows Aggregation between two classes: A Pond has zero or more Ducks, and a Duck has at most one Pond (at a time). Duck can exist separately from a Pond, e.g. it can live near a lake. When we destroy a Pond we usually do not kill all the Ducks.
+
+
+
+## Realization/Implementation
+
+A realization relationship is a relationship between two model elements, in which one model element (the client) realizes (implements or executes) the behavior that the other model element (the supplier) specifies.
+ 
+Several clients can realize the behavior of a single supplier. 
+
+Typically, realization relationships do not have names. If you name a realization, the name is displayed beside to the realization connector in the diagram.
+
+As the following figure illustrates, a realization is displayed in the diagram editor as a `dashed line with an unfilled arrowhead [hollow triangle]` that points from the client (realizes the behavior) to the supplier (specifies the behavior).
+
+![alt text](image-22.png)
+
+`symbolic of realization           (implementer) -------▻ (interface)`
+
+
+The realization relationship does not have names. It is mostly found in the interfaces.
+
+
+A plain arrow head is used on the interface end of the dashed line that connects it to its users. In component diagrams, the ball-and-socket graphic convention is used (implementors expose a ball or lollipop, whereas users show a socket). 
+
+Realizations can only be shown on class or component diagrams. A realization is a relationship between classes, interfaces, components and packages that connects a client element with a supplier element. A realization relationship between classes/components and interfaces shows that the class/component realizes the operations offered by the interface. 
+
+
+`Realization is one of the phase of an implementation .`
+
+OR 
+
+`Implimentation is a whole process. Realization process is a part/step of whole implimentation process.`
+
+
+::: Realization can be used ::: 
+
+- A component is realized by a set of classifiers that provide its implementation.
+- A collaboration instance contains the objects and messages that are needed to implement the behaviors that a use case specifies.
+- To model stepwise refinement, optimizations, transformations, templates, model synthesis, framework composition, etc.
+
+
+will discuss more about realization further.
+
+
+
+
+
+
+
+
