@@ -336,7 +336,126 @@ OR
 - To model stepwise refinement, optimizations, transformations, templates, model synthesis, framework composition, etc.
 
 
-will discuss more about realization further.
+//will discuss more about realization further...
+
+
+## Dependency
+
+Dependency is "a Relationship that signifies that a single model Element or a set of model Elements requires other model Elements for their specification or implementation.
+
+A dependency is a type of association where there is a semantic connection between dependent and independent model elements.
+
+It exists between two elements if changes to the definition of one element (the server or target) may cause changes to the other (the client or source). This association is uni-directional. A dependency is displayed as a dashed line with an open arrow that points from the client to the supplier. 
+
+This means that the complete semantics of the client Element(s) are either semantically or structurally dependent on the definition of the supplier Element(s).
+
+Two or more elements in this relationship are called `tuples`.
+
+
+In UML, this is indicated by a dashed line pointing from the dependent (or client) to the independent (or supplier) element. 
+
+The arrow representing a Dependency specifies the direction of a relationship, not the direction of a process. 
+
+![alt text](image-23.png)
+
+
+Dependency depicts how various things within a system are dependent on each other. In UML, a dependency relationship is the kind of relationship in which a client (one element) is dependent on the supplier (another element). It is used in class diagrams, component diagrams, deployment diagrams, and use-case diagrams, which indicates that a change to the supplier necessitates a change to the client.
+
+
+Dependency can be a weaker form of bond that indicates that one class depends on another because it uses it at some point in time. One class depends on another if the independent class is a parameter variable or local variable of a method of the dependent class. Sometimes the relationship between two classes is very weak. They are not implemented with member variables at all. Rather they might be implemented as member function arguments. 
+
+
+![alt text](image-24.png)
+
+
+Class diagram showing dependency between "Car" class and "Wheel" class (An even clearer example would be "Car depends on Fuel", because Car already aggregates (and not just uses) Wheel).
+
+
+
+### Types of Dependency Relationship 
+
+- `<<derive>> ` It is a constraint that specifies the template can be initialized by the source at the target location utilizing given parameters.
+
+- `<<derive>>` It represents that the source object's location can be evaluated from the target object.
+
+- `<<friend>>` It states the uniqueness of the source in the target object.
+
+- `<<instanceOf>>` It states that an instance of a target classifier is the source object.
+
+- `<<instantiate>>` It defines the capability of the source object, creating instances of a target object.
+
+- `<<refine>>` It states that the source object comprises of exceptional abstraction than that of the target object.
+
+- `<<use>>` When the packages are created in UML, the use of stereotype is used as it describes that the elements of the source package can also exist in the target package. It specifies that the source package uses some of the elements of the target package.
+
+- `<<substitute>>` -The substitute stereotype state that the client can be substituted at the runtime for the supplier.
+
+- `<<access>>` -It is also called as private merging in which the source package accesses the element of the target package.
+
+- `<<import>>` -It specifies that target imports the source package's element as they are defined within the target. It is also known as public merging.
+
+- `<<permit>>` -It describes that the source element can access the supplier element or whatever visibility is provided by the supplier.
+
+- `<<extend>>` -It states that the behavior of the source element can be extended by the target.
+
+- `<<include>>` -It describes the source element, which can include the behavior of another element at a specific location, just like a function call in C/C++.
+
+- `<<become>>` -It states that target is similar to the source with distinct roles and values.
+
+- `<<call>>` -It specifies that the target object can be invoked by the source.
+
+- `<<copy>>` -It states that the target is an independent replica of a source object.
+
+- `<<parameter>>` -It describes that the supplier is a parameter of the client's actions.
+
+- `<<send>>` -The client act as an operation, which sends some unspecified targets to the supplier.
+
+
+
+## Multiplicity
+
+
+In UML, multiplicity describes how many instances of one class can be connected to an instance of another class through a given association. This relation is often expressed as a string showing the lower and upper bounds at the endpoints of a connection.
+
+This association relationship indicates that (at least) one of the two related classes make reference to the other. This relationship is usually described as "A has a B" (a mother cat has kittens, kittens have a mother cat). 
+
+ 
+Multiplicity is a definition of `cardinality` - i.e. number of elements - of some collection of elements by providing an inclusive interval of non-negative integers to specify the allowable number of instances of described element. Multiplicity interval has some lower bound and (possibly infinite) upper bound: 
+
+
+The UML representation of an association is a line connecting the two associated classes. 
+At each end of the line there is optional notation. 
+
+For example, we can indicate, using an arrowhead that the pointy end is visible from the arrow tail. We can indicate ownership by the placement of a ball, the role the elements of that end play by supplying a name for the role, and the multiplicity of instances of that entity (the range of number of objects that participate in the association from the perspective of the other end). 
+
+
+Some typical Examples of multiplicity:
+
+![alt text](image-25.png)
+
+
+//Examples on cardinality
+
+![alt text](image-26.png)
+
+The text `1 .. 5` placed at the connection's end defines the range of possible accounts. To interpret this diagram, we would start reading from left to right.
+
+One customer must have between one and five bank accounts.
+
+
+![alt text](image-27.png)
+
+One bank account must belong to one up to two customers*.
+
+
+![alt text](image-3.png)
+
+One customer has one to five bank accounts and one bank account belongs to one or two customers.
+
+
+
+
+
 
 
 
