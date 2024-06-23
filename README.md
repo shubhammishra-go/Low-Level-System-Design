@@ -9,6 +9,9 @@ During the detailed phase the logical and functional design is done and the desi
 ![alt text](image-28.png)
 
 
+`<<entity>>,<<boundary>>` etc... are UML Stereotype.
+
+
 # Why LLD ?
 
 The goal of LLD or a low-level design document (LLDD) is to give the internal logical design of the actual program code. Low-level design is created based on the high-level design. LLD describes the class diagrams with the methods and relations between classes and program specs. It describes the modules so that the programmer can directly code the program from the document.
@@ -453,9 +456,36 @@ One bank account must belong to one up to two customers*.
 One customer has one to five bank accounts and one bank account belongs to one or two customers.
 
 
+# UML Stereotype
+
+Stereotypes is extensibility mechanisms in UML which allows designers to extend the `vocabulary of UML` in order to create new model elements. By applying appropriate stereotypes in your model you can make the specification model comprehensible.
+
+![alt text](image-29.png)
+
+A stereotyped model type can appear in a project many times. For example, when modeling an online shopping system with use case diagram you might have multiple actors who are <<administrator>>. Same for class model, you might have multiple <<Enum>> or <<Model>> classes. When a stereotyped model type is being used so frequently that they become primitive building blocks in a model, allowing to create it directly saves time in redefining it again and again.
+
+Stereotype also known as a `profile class` which defines how an existing metaclass may be extended as part of a profile. It enables the use of a platform or domain specific terminology or notation in place of, or in addition to, the ones used for the extended metaclass. 
+
+A stereotype cannot be used by itself, but must always be used with one of the metaclasses it extends. Stereotype cannot be extended by another stereotype. 
+
+A stereotype uses the same notation as a class, with the keyword `«stereotype»` shown before or above the name of the stereotype. Stereotype names should not clash with keyword names for the extended model element. 
+
+![alt text](image-30.png)
+
+
+Stereotype is a class, it may have properties. Properties of a stereotype are referred to as tag definitions. When a stereotype is applied to a model element, the values of the properties are referred to as tagged values. 
 
 
 
+## Stereotype Relationships
+
+A stereotype must always be used in conjunction with one of the metaclasses it extends. A metaclass may be extended by one or more stereotypes. Each stereotype may extend one or more metaclasses. 
+
+Stereotypes can participate in binary association. The opposite class can be another stereotype, a non-stereotype class owned by a profile or a metaclass. The stereotype must own property at the association end to be able to navigate to the opposite class. If the opposite end is not a stereotype, the opposite property must be owned by the association itself. 
+
+![alt text](image-31.png)
+
+A stereotype may generalize or specialize only another stereotype. 
 
 
 
