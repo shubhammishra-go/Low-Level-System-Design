@@ -6,7 +6,7 @@ The LLD phase is the stage where the actual software components are designed.
 
 During the detailed phase the logical and functional design is done and the design of application structure is developed during the high-level design phase. 
 
-![alt text](image.png)
+![alt text](image-28.png)
 
 
 # Why LLD ?
