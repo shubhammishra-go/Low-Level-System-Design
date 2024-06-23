@@ -6,7 +6,7 @@ The LLD phase is the stage where the actual software components are designed.
 
 During the detailed phase the logical and functional design is done and the design of application structure is developed during the high-level design phase. 
 
-![alt text](image-28.png)
+![alt text](images/image-28.png)
 
 
 `<<entity>>,<<boundary>>` etc... are UML Stereotype.
@@ -38,7 +38,7 @@ UML can be considered as the successor of object-oriented (OO) analysis and desi
 
 The unified modeling language (UML) is a general-purpose visual modeling language that is intended to provide a standard way to visualize the design of a system.
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 # Why UML ?
 
@@ -56,7 +56,7 @@ It helps software developers visualize, construct, and document new software sys
 
 UML provides a standard notation for many types of diagrams which can be roughly divided into three main groups: `behavior diagrams`, `interaction diagrams`, and `structure diagrams`. 
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 
 - `Structural diagrams` :::  Structure diagrams represent the `static aspects of the system`. It emphasizes the things that must be present in the system being modeled. Since structure diagrams represent the structure, they are used extensively in documenting the software architecture of software systems. For example, the component diagram describes how a software system is split up into components and shows the dependencies among these components. 
@@ -84,7 +84,7 @@ Class diagram in the Unified Modeling Language (UML) is a `type of static struct
 
 The class diagram is the main building block of object-oriented modeling. It is used for general conceptual modeling of the structure of the application, and for detailed modeling, translating the models into programming code. Class diagrams can also be used for data modeling. The classes in a class diagram represent both the main elements, interactions in the application, and the classes to be programmed. 
 
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 
 In the diagram, classes are represented with boxes that contain `three compartments`: 
@@ -102,7 +102,7 @@ In the diagram, classes are represented with boxes that contain `three compartme
 
 To specify the visibility of a class member (i.e. any attribute or method), these notations must be placed before the member's name.
 
-![alt text](image-4.png) 
+![alt text](images/image-4.png) 
 
 - (+) Public
 - (-) Private
@@ -122,7 +122,7 @@ The UML specifies two types of scope for members: instance and class. The class 
      - Attribute values are equal for all instances
      - Method invocation does not affect the classifier's state.
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 To indicate a classifier scope for a member, its name must be underlined. Otherwise, instance scope is assumed by default. 
 
@@ -132,7 +132,7 @@ To indicate a classifier scope for a member, its name must be underlined. Otherw
 
 A relationship is a general term covering the specific types of logical connections found on class and object diagrams. UML defines the following relationships.
 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
 we will discuss each & every relations.
 
@@ -146,7 +146,7 @@ It indicates that one of the two related classes (the subclass) is considered to
 
 A solid line with a hollow arrowhead that point from the child to the parent class.
 
-![alt text](image-13.png)
+![alt text](images/image-13.png)
 
 
 The generalization relationship is also known as the inheritance or ```"is a"``` relationship. 
@@ -165,7 +165,7 @@ Association relationship is a structural relationship in which different objects
 
 It is represented by a `line` between the classes followed by an arrow that navigates the direction, and when the arrow is on both sides, it is then called a bidirectional association. `We can specify the multiplicity of an association by adding the adornments on the line that will denote the association.`
 
-![alt text](image-21.png)
+![alt text](images/image-21.png)
 
 
 An association represents a family of structural links. 
@@ -180,7 +180,7 @@ An association can be named, and the ends of an association can be adorned with 
 The dot notation for example allows to represent with a little dot on the side of one class that the association end is owned by the other side.
 
 
-![alt text](image-15.png)
+![alt text](images/image-15.png)
 
 
 There are three types of association: 
@@ -201,7 +201,7 @@ There are 3 types of following represtenations of associations.
 
 `A solid line connecting two classes`. But they are further classified.
 
-![alt text](image-14.png)
+![alt text](images/image-14.png)
 
 `Top:` A bidirectional association.
 
@@ -228,7 +228,7 @@ OR
 
 Aggregation is a variant of the `"has a"` association relationship; aggregation is more specific than association. It is an association that represents a `part-whole` or `part-of relationship`. As shown in the image, a Professor 'has a' class to teach. As a type of association, an aggregation can be named and have the same adornments that an association can. However, an aggregation may not involve more than two classes; it must be a binary association. Furthermore, there is hardly a difference between aggregations and associations during implementation, and the diagram may skip aggregation relations altogether.
 
-![alt text](image-16.png)
+![alt text](images/image-16.png)
 
 Class diagram showing Aggregation between two classes. Here, a Professor 'has a' class to teach.
 
@@ -245,7 +245,7 @@ Another Example:
 
 Here we are considering a car and a wheel example. A car cannot move without a wheel. But the wheel can be independently used with the bike, scooter, cycle, or any other vehicle. The wheel object can exist without the car object, which proves to be an aggregation relationship.
 
-![alt text](image-17.png)
+![alt text](images/image-17.png)
 
 
 So, In aggregation, the object may only contain a reference or pointer to the object (and `not have lifetime responsibility` for it).
@@ -265,7 +265,7 @@ The graphical representation is a `filled diamond shape` on the containing class
 The composition is a part of aggregation, and it portrays [to show something] the whole-part relationship. It depicts dependency between a composite (parent) and its parts (children), which means that if the composite is discarded, so will its parts get deleted. It exists between similar objects.
 
 
-![alt text](image-19.png)
+![alt text](images/image-19.png)
 
 As you can see from the example given below, the composition association relationship connects the Person class with Brain class, Heart class, and Legs class. If the person is destroyed, the brain, heart, and legs will also get discarded.
 
@@ -276,7 +276,7 @@ As you can see from the example given below, the composition association relatio
 The composition and aggregation are two subsets of association. In both of the cases, the object of one class is owned by the object of another class; the only difference is that in composition, the child does not exist independently of its parent, whereas in aggregation, the child is not dependent on its parent i.e., standalone. An aggregation is a special form of association, and composition is the special form of aggregation.
 
 
-![alt text](image-20.png)
+![alt text](images/image-20.png)
 
 
 ::: `Composition relationship` ::: 
@@ -294,7 +294,7 @@ The composition and aggregation are two subsets of association. In both of the c
 Thus the aggregation relationship is often "catalog" containment to distinguish it from composition's "physical" containment. UML 2 does not specify any semantic for the aggregation compared to the simple association. 
 
 
-![alt text](image-18.png)
+![alt text](images/image-18.png)
 
 Two class diagrams. The diagram on top shows Composition between two classes: A Car has exactly one Carburetor, and a Carburetor is a part of one Car. Carburetors cannot exist as separate parts, detached from a specific car. 
 
@@ -312,7 +312,7 @@ Typically, realization relationships do not have names. If you name a realizatio
 
 As the following figure illustrates, a realization is displayed in the diagram editor as a `dashed line with an unfilled arrowhead [hollow triangle]` that points from the client (realizes the behavior) to the supplier (specifies the behavior).
 
-![alt text](image-22.png)
+![alt text](images/image-22.png)
 
 `symbolic of realization           (implementer) -------▻ (interface)`
 
@@ -359,7 +359,7 @@ In UML, this is indicated by a dashed line pointing from the dependent (or clien
 
 The arrow representing a Dependency specifies the direction of a relationship, not the direction of a process. 
 
-![alt text](image-23.png)
+![alt text](images/image-23.png)
 
 
 Dependency depicts how various things within a system are dependent on each other. In UML, a dependency relationship is the kind of relationship in which a client (one element) is dependent on the supplier (another element). It is used in class diagrams, component diagrams, deployment diagrams, and use-case diagrams, which indicates that a change to the supplier necessitates a change to the client.
@@ -368,7 +368,7 @@ Dependency depicts how various things within a system are dependent on each othe
 Dependency can be a weaker form of bond that indicates that one class depends on another because it uses it at some point in time. One class depends on another if the independent class is a parameter variable or local variable of a method of the dependent class. Sometimes the relationship between two classes is very weak. They are not implemented with member variables at all. Rather they might be implemented as member function arguments. 
 
 
-![alt text](image-24.png)
+![alt text](images/image-24.png)
 
 
 Class diagram showing dependency between "Car" class and "Wheel" class (An even clearer example would be "Car depends on Fuel", because Car already aggregates (and not just uses) Wheel).
@@ -434,24 +434,24 @@ For example, we can indicate, using an arrowhead that the pointy end is visible 
 
 Some typical Examples of multiplicity:
 
-![alt text](image-25.png)
+![alt text](images/image-25.png)
 
 
 //Examples on cardinality
 
-![alt text](image-26.png)
+![alt text](images/image-26.png)
 
 The text `1 .. 5` placed at the connection's end defines the range of possible accounts. To interpret this diagram, we would start reading from left to right.
 
 One customer must have between one and five bank accounts.
 
 
-![alt text](image-27.png)
+![alt text](images/image-27.png)
 
 One bank account must belong to one up to two customers*.
 
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 One customer has one to five bank accounts and one bank account belongs to one or two customers.
 
@@ -460,7 +460,7 @@ One customer has one to five bank accounts and one bank account belongs to one o
 
 Stereotypes is extensibility mechanisms in UML which allows designers to extend the `vocabulary of UML` in order to create new model elements. By applying appropriate stereotypes in your model you can make the specification model comprehensible.
 
-![alt text](image-29.png)
+![alt text](images/image-29.png)
 
 A stereotyped model type can appear in a project many times. For example, when modeling an online shopping system with use case diagram you might have multiple actors who are <<administrator>>. Same for class model, you might have multiple <<Enum>> or <<Model>> classes. When a stereotyped model type is being used so frequently that they become primitive building blocks in a model, allowing to create it directly saves time in redefining it again and again.
 
@@ -470,7 +470,7 @@ A stereotype cannot be used by itself, but must always be used with one of the m
 
 A stereotype uses the same notation as a class, with the keyword `«stereotype»` shown before or above the name of the stereotype. Stereotype names should not clash with keyword names for the extended model element. 
 
-![alt text](image-30.png)
+![alt text](images/image-30.png)
 
 
 Stereotype is a class, it may have properties. Properties of a stereotype are referred to as tag definitions. When a stereotype is applied to a model element, the values of the properties are referred to as tagged values. 
@@ -483,7 +483,7 @@ A stereotype must always be used in conjunction with one of the metaclasses it e
 
 Stereotypes can participate in binary association. The opposite class can be another stereotype, a non-stereotype class owned by a profile or a metaclass. The stereotype must own property at the association end to be able to navigate to the opposite class. If the opposite end is not a stereotype, the opposite property must be owned by the association itself. 
 
-![alt text](image-31.png)
+![alt text](images/image-31.png)
 
 A stereotype may generalize or specialize only another stereotype. 
 
