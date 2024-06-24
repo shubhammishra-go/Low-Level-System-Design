@@ -548,3 +548,106 @@ In principle entities should not know about boundaries and controls. In practice
 Similarly, the constraint of a boundary class not knowing about other boundary classes only applies at the highest level, and not between classes that cooperate to implement the same boundary. 
 
 
+# Use Case Diagrams
+
+Use case diagrams is a `behavior diagrams` used to describe a set of `actions (use cases)` that some `system or systems (subject)` should or can perform in collaboration with one or more external users of the system (actors). Each use case should provide some observable and valuable result to the actors or other stakeholders of the system. 
+
+A use-case model describes a `system's functional requirements in terms of use cases`. It is a model of the system's intended functionality (use cases) and its environment (actors). Use cases enable you to relate what you need from a system to how the system delivers on those needs.
+
+
+![alt text](images/image-35.png)
+
+
+`Note :::` Use cases represent only the `functional requirements` of a system. Other requirements such as business rules, quality of service requirements, and implementation constraints must be represented separately, again, with other UML diagrams.
+
+- Use Case Diagrams describe the high-level functional behavior of the system.
+- It answers what system does from the user point of view.
+- Use case answers ‘What will the system do?’ and at the same time tells us ‘What will the system NOT do?'.
+
+A use case illustrates a unit of functionality provided by the system. `The primary purpose of the use case diagram is to help development teams visualize the functional requirements of a system, including the relationship of “actors” to the essential processes, as well as the relationships among different use cases.`
+
+
+
+## Why Use Case Diagrams ?
+
+Use case diagrams are typically developed in the early stage of development and people often apply use case modeling for the following purposes
+
+- Specify the context of a system
+- Capture the requirements of a system
+- Validate a systems architecture
+- Drive implementation and generate test cases
+- Developed by analysts together with domain experts
+
+
+## Components of the Use Case Diagrams
+
+- `System boundary:` A system boundary defines the scope and limits of the system. It is shown as a rectangle that spans all use cases of the system.
+![alt text](images/image-36.png)
+
+- `Actors:` An actor is an entity who performs specific actions. These roles are the actual business roles of the users in a given system. An actor interacts with a use case of the system. For example, in a banking system, the customer is one of the actors.
+![alt text](images/image-37.png)
+
+- `Use Case:` Every business functionality (System functions) is a potential use case. The use case should list the discrete business functionality specified in the problem statement. 
+![alt text](images/image-38.png)
+Each Actor must be linked to a use case, while some use cases may not be linked to actors.
+
+
+## Use Case Relationship
+
+
+- `Include:` Include relationship represents an invocation of one use case by another use case. From a coding perspective, it is like one function being called by another function. 
+
+![alt text](images/image-39.png)
+
+The include relationship adds additional functionality not specified in the base use case. The `<<Include>>` relationship is used to include common behavior from an included use case into a base use case in order to support the reuse of common behavior.
+
+![alt text](images/image-43.png)
+
+A uses relationship from base use case to child use case indicates that an instance of the base use case will include the behavior as specified in the child use case.
+
+An include relationship is depicted with a directed arrow having a dotted line. `The tip of arrowhead points to the child use case and the parent use case connected at the base of the arrow.`
+
+`(base-use-case) ------> (child-use-case)`
+
+The stereotype `"<<include>>"` identifies the relationship as an include relationship.
+
+
+- `Extend:` This relationship signifies that the extended use case will work exactly like the base use case, except that some new steps will be inserted in the extended use case.
+
+![alt text](images/image-40.png)
+
+The extend relationships are important because they show optional functionality or system behavior. The` <<extend>>` relationship is used to include optional behavior from an extending use case in an extended use case. Take a look at the use case diagram example below. It shows an extend connector and an extension point "Search".
+
+![alt text](images/image-44.png)
+
+Indicates that an "Invalid Password" use case may include (subject to specified in the extension) the behavior specified by base use case "Login Account".
+
+Depict with a directed arrow having a dotted line. `The tip of arrowhead points to the base use case and the child use case is connected at the base of the arrow.`
+
+`(child-use-case) ------> (base-use-case)`
+
+The stereotype `"<<extends>>"` identifies as an extend relationship
+
+
+- `Association Link :` A Use Case diagram illustrates a set of use cases for a system, i.e. the actors and the relationships between the actors and use cases.
+![alt text](images/image-42.png)
+
+
+- `Generalization:` A generalization relationship is a parent-child relationship between use cases. 
+
+![alt text](images/image-41.png)
+
+The child use case is an enhancement of the parent use case.
+
+
+A generalization relationship means that a child use case inherits the behavior and meaning of the parent use case. The child may add or override the behavior of the parent. The figure below provides a use case example by showing two generalization connectors that connect between the three use cases.
+
+![alt text](images/image-45.png)
+
+`(child-use-case) ------> (base-use-case)`
+
+The child use case is connected at the base of the arrow. The tip of the arrow is connected to the parent use case.
+
+
+
+
