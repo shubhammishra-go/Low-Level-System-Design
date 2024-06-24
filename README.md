@@ -570,7 +570,13 @@ A use case illustrates a unit of functionality provided by the system. `The prim
 
 ## Why Use Case Diagrams ?
 
-Use case diagrams are typically developed in the early stage of development and people often apply use case modeling for the following purposes
+Use case diagrams are typically developed in the early stage of development.
+
+A use case itself might drill into a lot of detail about every possibility, a use-case diagram can help provide a higher-level view of the system. It has been said before that "Use case diagrams are the blueprints for your system".
+
+Due to their simplistic nature, use case diagrams can be a good communication tool for stakeholders. The drawings attempt to mimic the real world and provide a view for the stakeholder to understand how the system is going to be designed. Siau and Lee conducted research to determine if there was a valid situation for use case diagrams at all or if they were unnecessary. What was found was that the use case diagrams conveyed the intent of the system in a more simplified manner to stakeholders and that they were "interpreted more completely than class diagrams".
+
+Developers often apply use case modeling for the following purposes :
 
 - Specify the context of a system
 - Capture the requirements of a system
