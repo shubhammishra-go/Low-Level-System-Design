@@ -488,9 +488,63 @@ Stereotypes can participate in binary association. The opposite class can be ano
 A stereotype may generalize or specialize only another stereotype. 
 
 
+# Entity Control Boundary
+
+Boundary-control-entity (BCE) is an `architectural pattern` used in `use-case driven object-oriented programming` that structures the classes composing high-level object-oriented source code according to their responsibilities in the use-case realization.
+
+The Entity-Control-Boundary Pattern (ECB) is a variation of the `Model-View-Controller (MVC)` Pattern.
+
+Entity, Control, and Boundary are class stereotypes, but UML has some special icons to represent them:
+
+![alt text](images/image-32.png)
+
+Here's the same diagram without the special icons:
+
+![alt text](images/image-33.png)
 
 
+The ECB pattern organises the responsibilities of classes according to their role in the use-case realization:
+
+- `Entities` are objects representing system data: Customer, Transaction, Cart, etc. OR we can say it represents long-lived information relevant for the stakeholders (i.e. mostly derived from domain objects, usually persistent).
+
+- `Boundaries` are objects that interface with system actors: user interfaces, gateways, proxies, etc. OR we can say it encapsulates interaction with external actors (users or external systems).
+
+- `Controllers` are objects that mediate between boundaries and entities. They orchestrate the execution of commands coming from the boundary. OR we can say ensures the processing required for the execution of a use-case and its business logic, and coordinates, sequences controls other objects involved in the use-case.
+
+It was originally called `Entity-Interface-Control (EIC)` but very quickly the term `"boundary" replaced "interface"` in order to avoid the potential confusion with object-oriented programming language terminology.
+
+The corresponding classes are then grouped into service packages, which are an indivisible set of related classes that can be used as software delivery units. 
+
+ECB classes are first identified when use-cases are analyzed ::::
+
+- every use case is represented as a control class;
+- every different relation between a use-case and an actor is represented as a boundary class;
+- entities are derived from the use-case narrative.
+
+The classes are then refined and re-structured or reorganized as needed for the design, for example:
+
+- Factoring out common behaviors in different use-case controls
+- Identifying a central boundary class for each kind of human actor and for each external system that would provide a consistent interface to the outside world.  
+
+The ECB pattern assumes that the responsibilities of the classes is also reflected in the relations and interactions between the different categories of classes in order to ensure the robustness of the design.
 
 
+## Robustness Diagram
+
+Robustness diagrams allow to visually represent the `relation between entities, controls, boundaries and actors.` It uses graphical stereotypes introduced in Jacobson's early work:
+
+![alt text](images/image-34.png)
+
+
+The following robustness constraints apply: 
+
+- `Actors` may only know and communicate with boundaries
+- `Boundaries` may communicate with actors and controls only.
+- `Controls` may know and communicate with boundaries and entities, and if needed other controls.
+- `Entities` may only know about other entities but could communicate also with controls.
+
+In principle entities should not know about boundaries and controls. In practice however, some variants allow entities, boundaries and controls to subscribe as observer to an entity.
+
+Similarly, the constraint of a boundary class not knowing about other boundary classes only applies at the highest level, and not between classes that cooperate to implement the same boundary. 
 
 
