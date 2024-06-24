@@ -582,13 +582,17 @@ Use case diagrams are typically developed in the early stage of development and 
 ## Components of the Use Case Diagrams
 
 - `System boundary:` A system boundary defines the scope and limits of the system. It is shown as a rectangle that spans all use cases of the system.
+
 ![alt text](images/image-36.png)
 
 - `Actors:` An actor is an entity who performs specific actions. These roles are the actual business roles of the users in a given system. An actor interacts with a use case of the system. For example, in a banking system, the customer is one of the actors.
+
 ![alt text](images/image-37.png)
 
 - `Use Case:` Every business functionality (System functions) is a potential use case. The use case should list the discrete business functionality specified in the problem statement. 
+
 ![alt text](images/image-38.png)
+
 Each Actor must be linked to a use case, while some use cases may not be linked to actors.
 
 
