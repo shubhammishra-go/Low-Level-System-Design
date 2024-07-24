@@ -75,7 +75,7 @@ for examples : `Sequence diagram` , `Communication diagram` .
 
 
 
-we will discusss just Class Diagram & Use case diagram.
+we will discusss Class Diagram , Use case diagram & Sequence diagram only.
 
 
 # Class Diagram
@@ -657,6 +657,208 @@ A generalization relationship means that a child use case inherits the behavior 
 `(child-use-case) ------> (base-use-case)`
 
 The child use case is connected at the base of the arrow. The tip of the arrow is connected to the parent use case.
+
+
+# Sequence Diagram
+
+A Sequence diagram shows process interactions arranged in time sequence. 
+
+This diagram depicts the processes and objects involved and the sequence of messages exchanged as needed to carry out the functionality. 
+
+![alt text](images/image-46.png)
+
+Sequence diagrams are typically associated with use case realizations in the `4+1 architectural view model` of the system under development. Sequence diagrams are sometimes called `event diagrams` or `event scenarios`. 
+
+For a particular scenario of a use case, the diagrams show the events that external actors generate, their order, and possible inter-system events.
+
+The diagram emphasizes events that cross the system boundary from actors to systems. A system sequence diagram should be done for the main success scenario of the use case, and frequent or complex alternative scenarios. 
+
+
+## Types of Sequence Diagrams
+
+There are two kinds of sequence diagrams:
+
+- `Sequence Diagram (SD)` ::: A regular version of sequence diagram describes how the system operates, and every object within a system is described specifically.
+
+- `System Sequence Diagram (SSD)` ::: All systems are treated as a `black box`, where all classes owned by the system are not depicted. Instead, only an object named System is depicted.
+
+
+
+## Key elements of Sequence Diagrams
+
+A sequence diagram shows, as parallel vertical lines (`lifelines`), different processes or objects that live simultaneously, and, as horizontal arrows, the messages exchanged between them in the order in which they occur. This allows for the graphical specification of simple runtime scenarios. 
+
+
+A system sequence diagram should specify and show the following:
+
+- `lifelines` ::: An individual participant in the sequence diagram is represented by a lifeline. It is positioned at the top of the diagram. 
+
+![alt text](images/image-47.png)
+
+- `External actors` ::: A role played by an entity that interacts with the subject is called as an actor. It is out of the scope of the system. It represents the role, which involves human users and external hardware or subjects. An actor may or may not represent a physical entity, but it purely depicts the role of an entity. Several distinct roles can be played by an actor or vice versa.
+
+![alt text](images/image-48.png)
+
+- `Activation` ::: It is represented by a thin rectangle on the lifeline. It describes that time period in which an operation is performed by an element, such that the top and the bottom of the rectangle is associated with the initiation and the completion time, each respectively.
+
+![alt text](images/image-49.png)
+    
+- Messages (methods) invoked by these actors (`Call Message`) ::: It defines a particular communication between the lifelines of an interaction, which represents that the target lifeline has invoked an operation.
+
+![alt text](images/image-50.png)
+    
+- Return values (if any) associated with previous messages (`Return Message`) ::: It defines a particular communication between the lifelines of interaction that represent the flow of information from the receiver of the corresponding caller message.
+
+![alt text](images/image-51.png)
+    
+-  `Self Message`  ::: It describes a communication, particularly between the lifelines of an interaction that represents a message of the same lifeline, has been invoked.
+
+![alt text](images/image-52.png)
+
+-  `Recursive Message` ::: A self message sent for recursive purpose is called a recursive message. In other words, it can be said that the recursive message is a special case of the self message as it represents the recursive calls.
+
+![alt text](images/image-53.png)
+
+-  `Create Message`  ::: It describes a communication, particularly between the lifelines of an interaction describing that the target (lifeline) has been instantiated.
+
+![alt text](images/image-54.png)
+
+-  `Destroy Message` ::: It describes a communication, particularly between the lifelines of an interaction that depicts a request to destroy the lifecycle of the target.
+
+![alt text](images/image-55.png)
+
+-  `Duration Message` ::: It describes a communication particularly between the lifelines of an interaction, which portrays the time passage of the message while modeling a system.
+
+![alt text](images/image-56.png)
+
+- `Note` ::: A note is the capability of attaching several remarks to the element. It basically carries useful information for the modelers.
+
+![alt text](images/image-57.png)
+
+
+### Sequence Fragments
+
+- UML 2.0 introduces sequence (or interaction) fragments. Sequence fragments make it easier to create and maintain accurate sequence diagrams
+    
+- A sequence fragment is represented as a box, called a combined fragment, which encloses a portion of the interactions within a sequence diagram
+    
+- The fragment operator (in the top left cornet) indicates the type of fragment
+    
+- Fragment types: ref, assert, loop, break, alt, opt, neg
+
+![alt text](images/image-58.png)
+
+// Types of fragments
+
+- `alt` ::: Alternative multiple fragments: only the one whose condition is true will execute.
+
+- `opt` ::: Optional, the fragment executes only if the supplied condition is true. Equivalent to an alt only with one trace.
+
+- `par` ::: Parallel, each fragment is run in parallel.
+
+- `loop` ::: Loop, the fragment may execute multiple times, and the guard indicates the basis of iteration.
+
+- `region` ::: Critical region: the fragment can have only one thread executing it at once.
+
+- `neg` ::: Negative: the fragment shows an invalid interaction.
+
+- `ref` ::: Reference: refers to an interaction defined on another diagram. The frame is drawn to cover the lifelines involved in the interaction. You can define parameters and a return value.
+
+- `sd` ::: Sequence diagram: used to surround an entire sequence diagram.
+
+
+## Why Sequence Diagrams?
+
+- It explores the real-time application.
+    
+- It depicts the message flow between the different objects.
+    
+- It has easy maintenance.
+    
+- It is easy to generate.
+    
+- Implement both forward and reverse engineering.
+    
+- It can easily update as per the new change in the system.
+
+ 
+
+## Why not Sequence Diagrams?
+
+- In the case of too many lifelines, the sequence diagram can get more complex.
+    
+- The incorrect result may be produced, if the order of the flow of messages changes.
+    
+- Since each sequence needs distinct notations for its representation, it may make the diagram more complex.
+    
+- The type of sequence is decided by the type of message.
+
+
+## How to Draw a Sequence Diagram
+
+A sequence diagram represents the scenario or flow of events in one single use case. The message flow of the sequence diagram is based on the narrative of the particular use case.
+
+Then, before you start drawing the sequence diagram or decide what interactions should be included in it, you need to draw the use case diagram and ready a comprehensive description of what the particular use case does.
+
+![alt text](images/image-59.png)
+
+From the above use case diagram example of ‘Create New Online Library Account’, we will focus on the use case named ‘Create New User Account’ to draw our sequence diagram example.
+
+Before drawing the sequence diagram, it’s necessary to identify the objects or actors that would be involved in creating a new user account. These would be;
+
+- Librarian
+    
+- Online Library Management system
+
+- User credentials database
+    
+- Email system
+
+Once you identify the objects, it is then important to write a detailed description of what the use case does. From this description, you can easily figure out the interactions (that should go in the sequence diagram) that would occur between the objects above, once the use case is executed.
+
+Here are the steps that occur in the use case named ‘Create New Library User Account’.
+
+- The librarian request the system to create a new online library account
+    
+- The librarian then selects the library user account type
+    
+- The librarian enters the user’s details
+    
+- The user’s details are checked using the user Credentials Database
+    
+- The new library user account is created
+    
+- A summary of the new account’s details is then emailed to the user
+
+From each of these steps, you can easily specify what messages should be exchanged between the objects in the sequence diagram. Once it’s clear, you can go ahead and start drawing the sequence diagram.
+
+The sequence diagram below shows how the objects in the online library management system interact with each other to perform the function ‘Create New Library User Account’.
+
+![alt text](images/image-60.png)
+
+
+## Common Mistakes while drawing Sequence Diagrams
+
+When drawing sequence diagrams, designers tend to make these common mistakes. By avoiding these mistakes you can ensure the quality of your diagram.
+
+- Adding too much detail. This clutters up the diagram and makes it difficult to read.
+    
+- Obsolete and out-of-date sequence diagrams that are irrelevant when compared to the interfaces, actual architectures, etc. of the system. Don’t forget to replace them or modify them.
+    
+- Leaving no blank space between the use case text and the message arrow; this makes it difficult for anyone to read the diagram.
+    
+- Not considering the origins of message arrows carefully.
+
+
+## Sequence Diagram Example
+
+It is a Online Movie Ticket Booking System Sequence Diagram.
+
+![alt text](images/image-61.png)
+
+
+
+
 
 
 
